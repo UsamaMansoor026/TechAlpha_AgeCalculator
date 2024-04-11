@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: url("./assets/bg.jpg") no-repeat center center/cover;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  outline: 1px solid #fff;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 26px;
+  position: relative;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 1px 15px 2px rgba(255, 255, 255, 0.55);
+  -webkit-box-shadow: 0px 1px 15px 2px rgba(255, 255, 255, 0.55);
+  -moz-box-shadow: 0px 1px 15px 2px rgba(255, 255, 255, 0.55);
+}
+
+.container h1 {
+  color: #fff;
+  margin-block: 14px;
+}
+
+.container .copyright {
+  position: absolute;
+  bottom: 16px;
+  color: #fff;
+}
+
+.copyright span {
+  color: #1616c9;
+  font-weight: 900;
+  font-size: 21px;
+}
+
+.input_and_btn {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  width: 100%;
+  padding-inline: 29px;
+}
+
+.input_and_btn > input {
+  padding: 12px 20px;
+  outline: none;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  flex: 1;
+  position: relative;
+}
+
+.input_and_btn > button {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  background: linear-gradient(to right, #a823bc, #187253);
+  color: #fff;
+  font-weight: 700;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* 
+    This is use to make whole input field clickable to open the calendar because by default
+    the calendar is only open when user click on the calendar icon.
+ */
+.input_and_btn input::-webkit-calendar-picker-indicator {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: auto;
+  height: auto;
+  background-position: calc(100% - 10px);
+  background-size: 17px;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+#result {
+  color: #fff;
+  word-spacing: 4px;
+  margin-inline: 26px;
+  text-align: center;
+}
+
+#result span {
+  color: #1616c9;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.name {
+  width: 90%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  color: #fff;
+  text-transform: capitalize;
+}
